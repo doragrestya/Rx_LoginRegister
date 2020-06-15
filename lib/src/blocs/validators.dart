@@ -25,9 +25,9 @@ class Validators{
   final validateName = StreamTransformer<String, String>.fromHandlers(
     handleData: (name, sink){
       if(name.isEmpty){
-        sink.add(name);
-      } else{
         sink.addError('Nama Lengkap Harus Diisi');
+      } else{
+        sink.add(name);
       }
     }
   );
